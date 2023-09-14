@@ -1,0 +1,49 @@
+.footer {
+   background-color: $main-text-color;
+   padding: toRem(50) toRem(0) toRem(40) toRem(0);
+   color: $white-color;
+   font-weight: 700;
+   // .footer__content
+   &__content {
+      text-align: center;
+      &:not(:last-child) {
+         @include adaptiveValue("margin-bottom", 80, 20, 0);
+      }
+   }
+   // .footer__menu
+   &__menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: toRem(20);
+   }
+}
+.content-footer {
+   // .content-footer__link
+   &__link {
+      &:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+   }
+   // .content-footer__geo
+   &__geo {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+   // .content-footer__call
+   &__call {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+.menu-footer {
+   // .menu-footer__link
+   &__link {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

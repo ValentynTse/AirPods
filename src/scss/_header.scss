@@ -1,0 +1,187 @@
+.header {
+   position: fixed;
+   width: 100%;
+   min-height: toRem(130);
+   @include adaptiveValue("padding-top", 40, 20, 0);
+   @include adaptiveValue("padding-bottom", 40, 20, 0);
+   // .header__container
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: toRem(15);
+   }
+   // .header__logo
+   &__logo {
+      position: relative;
+      z-index: 5;
+      img {
+         max-width: 100%;
+      }
+   }   
+}
+.menu {
+   // .menu__body
+   &__body {
+      @media (max-width: $mobile) {
+         padding: toRem(120) toRem(15) toRem(40) toRem(15);
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         right: -100%;
+         overflow: auto;
+         background-color: rgba(0, 0, 0, 0.829);
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         row-gap: toRem(40);
+         transition: all 0.3s ease 0s;
+         // &::before {
+         //    content: "";
+         //    position: fixed;
+         //    top: 0;
+         //    left: 0;
+         //    width: 100%;
+         //    height: toRem(50);
+         //    background-color: black;
+         //    z-index: 2;
+         // }
+         &._active {
+            right: 0;
+         }
+      }
+   }
+   // .menu__list
+   &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: toRem(3);
+      @include adaptiveValue("column-gap", 40, 15, 0);
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         flex: 1 1 auto;
+         align-items: center;
+         font-size: toRem(28);
+         row-gap: toRem(30);
+         color: $white-color;
+      }
+   }
+   // .menu__item
+   &__item {
+   }
+   // .menu__link
+   &__link {
+      font-weight: 700;
+      line-height: 133.333333%; /* 24px/18 */
+      transition: all 0.3s ease 0s;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
+
+//===================BURGER==============//
+// body {
+//    &._pc {
+//       .menu__list {
+//          > li {
+//             &:hover {
+//                .menu__sub-list {
+//                   opacity: 1;
+//                   visibility: visible;
+//                   transform: translate(0px, 0px);
+//                   pointer-events: all;
+//                }
+//             }
+//          }
+//       }
+//    }
+//    &._touch {
+//       .menu__arrow {
+//          display: block;
+//          width: 0;
+//          height: 0;
+//          margin-left: toRem(5);
+//          transition: transform 0.3s ease 0s;
+//          border-left: toRem(5) solid transparent;
+//          border-right: toRem(5) solid transparent;
+//          border-top: toRem(10) solid $white-text-color;
+//       }
+//       .menu__list {
+//          > li {
+//             display: flex;
+//             align-items: center;
+//             &._active {
+//                .menu__sub-list {
+//                   opacity: 1;
+//                   visibility: visible;
+//                   transform: translate(0px, 0px);
+//                   pointer-events: all;
+//                }
+//                .menu__arrow {
+//                   transform: rotate(-180deg);
+//                }
+//             }
+//          }
+//          .menu__link {
+//             flex: 1 1 auto;
+//          }
+//       }
+//    }
+//    &._lock {
+//       overflow: hidden;
+//    }
+// }
+.icon-menu {
+   display: none;
+   @media (max-width: $mobile) {
+      display: block;
+      position: relative;
+      width: toRem(30);
+      height: toRem(18);
+      background-color: transparent;
+      z-index: 5;
+      @media (any-hover: none) {
+         cursor: default;
+      }
+      span,
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: toRem(2);
+         right: 0;
+         background-color: $main-text-color;
+         transition: all 0.3s ease 0s;
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      span {
+         top: calc(50% - toRem(1));
+      }
+      &._active {
+         span {
+            transform: scale(0) translate(0px, -50%);
+         }
+         &::before {
+            background-color: #fff;
+            top: calc(50% - toRem(1));
+            transform: rotate(-45deg);
+         }
+         &::after {
+            background-color: #fff;
+            top: calc(50% - toRem(1));
+            transform: rotate(45deg);
+         }
+      }
+   }
+}
+
+//=======================================//

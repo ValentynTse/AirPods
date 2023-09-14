@@ -1,0 +1,47 @@
+//========COLORS========//
+$main-text-color:#000000;
+
+$white-color:#FFFFFF;
+$white-bgd-color:#ffffff;
+
+$pink-color:#F3D6D1;
+$blue-color:#D3E1ED;
+$gray-color:#777777;
+$green-color:#E1ECDE;
+$milk-color:#FAFAFA;
+
+
+//============GRADIENTS==================//
+
+$bgd-pink: linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0.00) 100%);
+$bgd-blue: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+$bgd-gray: linear-gradient(180deg, #B6B6B6 0%, rgba(235, 235, 235, 0.00) 100%);
+$bgd-green: linear-gradient(180deg, #DDEAD9 0%, rgba(235, 235, 235, 0.00) 100%);
+$bgd-milk: linear-gradient(180deg, #FAFAFA 0%, rgba(235, 235, 235, 0.00) 100%);
+
+//=============WIDTHS===================//
+
+//Мінімальна ширина сторінки
+$minWidth: 320;
+//Ширина полотна(макету)
+$maxWidth: 1920;
+//Ширина контейнера
+$maxWidthContainer: 1200;
+//Падінги контейнера
+$containerPadding: 30;
+
+//=============BREAKPOINTS============//
+
+//Ширина спрацювання першого брейкпойнту
+$containerWidth:$maxWidthContainer+ $containerPadding;
+
+//Брейкпойнти
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+//Тип адаптиву
+//1 = чуйність (у контейнера немає брейкпонтів)
+//2 = по брейк-пойнтам
+$responsiveType: 1;

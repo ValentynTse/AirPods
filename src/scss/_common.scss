@@ -1,0 +1,90 @@
+//Заголовки, загальні блоки та інше
+
+//блок-заголовок секцій
+.block-header {
+	text-align: center;
+	// .block-header__title
+	&__title {
+		font-weight: 700;
+			line-height: 120%; /* 43.2px */
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		// .block-header__title--big
+		&--big {
+		@include adaptiveValue("font-size", 64, 36,0);
+		}
+		// .block-header__title--small
+		&--small {
+			font-size: toRem(36);			
+		}
+	}
+	// .block-header__text
+	&__text {
+		display: inline-block;
+      max-width: toRem(560);
+		p{
+			&:not(:last-child){
+				margin-bottom: toRem(20);
+			}
+		}		
+	}
+}
+
+
+.button {
+	display: inline-flex;
+	padding: toRem(15) toRem(58) toRem(15) toRem(58);
+	min-height: toRem(50);	
+	align-items: center;
+	justify-content: center;
+	border-radius: toRem(30);
+	text-transform: uppercase;
+	font-size: em(16);	
+	font-weight: 700;
+	line-height: 133.333333%; /* 32px/24 */
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $gray-color;
+         color: $pink-color;
+		}
+	}
+	&--black{
+		background-color: $main-text-color;
+		color: $white-color;
+	}
+	&--white {
+		background-color: $white-bgd-color;
+		color: $main-text-color;
+	}
+	// // .button--min
+	// &--min {
+	// }
+	// // .button--call
+	// &--call {
+	// 	span {
+	// 		display: flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		padding-left: toRem(16);
+	// 		gap: toRem(16);
+	// 		&::after {
+	// 			content: "";
+	// 			background: $white-bgd-color url("../src/img/icons/phone.svg") center no-repeat;
+	// 			flex: 0 0 toRem(48);
+	// 			width: toRem(48);
+	// 			height: toRem(48);
+	// 			border-radius: 50%;
+	// 			@media (max-width: toRem(1320))  {
+	// 					flex: 0 0 toRem(28);
+	// 					width: toRem(28);
+	// 					height: toRem(28);				
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// &--fw {
+	// 	width: 100%;
+	// }
+}
