@@ -161,6 +161,7 @@ body {
 
 .header {
   position: fixed;
+  z-index: 3;
   width: 100%;
   min-height: 8.125rem;
   padding-top: calc(20px + 20 * ((100vw - 320px) / 1600));
@@ -319,18 +320,58 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
   background: linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0) 100%);
+  min-height: 100vh;
+}
+@media (max-width: 47.99875em) {
+  .hero {
+    min-height: 100%;
+  }
 }
 .hero__title {
   position: absolute;
-  top: 17.25rem;
+  top: 17.5rem;
   font-weight: 700;
   font-size: 13.125rem;
   line-height: 120%;
 }
+@media (max-width: 91.8125rem) {
+  .hero__title {
+    font-size: 160px;
+    top: 20rem;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 91.8125rem) and (max-width: 1200px) {
+  .hero__title {
+    font-size: calc(44px + 116 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 47.99875em) {
+  .hero__title {
+    z-index: 2;
+  }
+}
+@media (max-width: 41.25em) {
+  .hero__title {
+    top: 15.625rem;
+  }
+}
+@media (max-width: 29.99875em) {
+  .hero__title {
+    top: 11.25rem;
+  }
+}
 .hero__title span {
   display: inline-block;
+}
+@media (max-width: 91.8125rem) {
+  .hero__title span {
+    display: inline;
+  }
 }
 .hero__title--air {
   position: relative;
@@ -351,8 +392,6 @@ body {
 }
 .hero__images {
   text-align: center;
-}
-.hero__image--pink {
   position: relative;
   z-index: 1;
   max-width: 100%;

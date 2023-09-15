@@ -123,20 +123,40 @@ body {
    }
 }
 .hero {
-   min-height: 100vh;
    background: $bgd-pink;
-   // .hero__container
-   &__container {
+   min-height: 100vh;
+   @media (max-width: $mobile) {
+      min-height: 100%;
    }
    // .hero__title
    &__title {
       position: absolute;
-      top: toRem(276);
+      top: toRem(280);
       font-weight: 700;
       font-size: toRem(210);
       line-height: 120%;
+      @media (max-width: toRem(1469)) {
+         @include adaptiveValue("font-size", 160, 44, 1);
+         top: toRem(320);
+         display: inline-block;
+         left: 0;
+         right: 0;
+         text-align: center;
+      }
+      @media (max-width: $mobile) {
+         z-index: 2;
+      }
+      @media (max-width: em(660)) {
+         top: toRem(250);
+      }
+      @media (max-width: $mobileSmall) {
+         top: toRem(180);
+      }
       span {
          display: inline-block;
+         @media (max-width: toRem(1469)) {
+            display: inline;
+         }
       }
       // .hero__title--air
       &--air {
@@ -166,14 +186,14 @@ body {
    // .hero__images
    &__images {
       text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
    }
    // .hero__image
    &__image {
       // .hero__image--pink
       &--pink {
-         position: relative;
-         z-index: 1;
-         max-width: 100%;
          img {
             max-width: 100%;
          }
@@ -346,7 +366,7 @@ body {
    }
 }
 .custom {
-      // .custom__container
+   // .custom__container
    &__container {
       min-height: 230vh;
       display: flex;
@@ -355,11 +375,11 @@ body {
       text-align: center;
       padding-bottom: 60vh;
    }
-      // .custom__content
+   // .custom__content
    &__content {
       justify-content: center;
    }
-      // .custom__text
+   // .custom__text
    &__text {
       max-width: toRem(300);
       &:not(:last-child) {
