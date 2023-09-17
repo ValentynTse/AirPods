@@ -417,6 +417,9 @@ body {
 .image img {
   max-width: 100%;
 }
+.image--active {
+  display: block;
+}
 
 .page__colors {
   padding-top: calc(20px + 26 * ((100vw - 320px) / 1600));
