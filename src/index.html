@@ -46,16 +46,26 @@
 							class="hero__title--s">S</span><span class="hero__title--m">M</span><span
 							class="hero__title--ax">AX</span>
 					</h1>
-					<div class="hero__images">
-						<div class="hero__image--pink"><img src="../src/img/hero/pink.png" alt="AirPods pink"></div>
-						<!-- <div class="hero__image--blue"><img src="../src/img/hero/blue.png" alt="AirPods blue"></div>
-						<div class="hero__image--gray"><img src="../src/img/hero/gray.png" alt="AirPods gray"></div>
-						<div class="hero__image--green"><img src="../src/img/hero/green.png" alt="AirPods green"></div>
-						<div class="hero__image--silver"><img src="../src/img/hero/silver.png" alt="AirPods silver"></div> -->
+					<div class="hero__image images">
+						<div class="image--pink image image--active">
+							<img class="" src="../src/img/hero/pink.png" alt="AirPods pink">
+						</div>
+						<div class="image--blue image">
+							<img class="" src="../src/img/hero/blue.png" alt="AirPods blue">
+						</div>
+						<div class="image--gray image">
+							<img class="" src="../src/img/hero/gray.png" alt="AirPods gray">
+						</div>
+						<div class="image--green image">
+							<img class="" src="../src/img/hero/green.png" alt="AirPods green">
+						</div>
+						<div class="image--silver image">
+							<img class="" src="../src/img/hero/silver.png" alt="AirPods silver">
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="page__colors">
+			<section class="page__colors colors">
 				<div class="colors__container">
 					<div class="colors__header-block block-header">
 						<h2 class="block-header__title block-header__title--small">Choose your colour</h2>
@@ -65,14 +75,31 @@
 						</div>
 					</div>
 					<ul class="colors__list">
-						<li class="colors__item"><a href="#" class="colors__button"><img
-									src="../src/img/colors/airpods-green.png" alt="airpods green"></a></li>
-						<li class="colors__item"><a href="#" class="colors__button"><img
-									src="../src/img/colors/airpods-blue.png" alt="airpods blue"></a></li>
-						<li class="colors__item"><a href="#" class="colors__button"><img
-									src="../src/img/colors/airpods-silver.png" alt="airpods silver"></a></li>
-						<li class="colors__item"><a href="#" class="colors__button"><img
-									src="../src/img/colors/airpods-gray.png" alt="airpods gray"></a></li>
+						<li class="colors__button" data-button="image--green">
+							<a href="#">
+								<img src="../src/img/colors/airpods-green.png" alt="airpods green">
+							</a>
+						</li>
+						<li class="colors__button" data-button="image--blue">
+							<a href="#">
+								<img src="../src/img/colors/airpods-blue.png" alt="airpods blue">
+							</a>
+						</li>
+						<li class="colors__button" data-button="image--silver">
+							<a href="#">
+								<img src="../src/img/colors/airpods-silver.png" alt="airpods silver">
+							</a>
+						</li>
+						<li class="colors__button" data-button="image--gray">
+							<a href="#">
+								<img src="../src/img/colors/airpods-gray.png" alt="airpods gray">
+							</a>
+						</li>
+						<li class="colors__button colors__button--active" data-button="image--pink">
+							<a href="#">
+								<img src="../src/img/colors/airpods-pink.png" alt="airpods pink">
+							</a>
+						</li>
 					</ul>
 				</div>
 			</section>
@@ -97,11 +124,12 @@
 								isolation.</p>
 						</div>
 						<div class="composition__image">
-							<img src="../src/img/composition/side_pink.jpg" alt="side pink">
-							<!-- <img src="../src/img/composition/side_blue.jpg" alt="side blue">
-							<img src="../src/img/composition/side_gray.jpg" alt="side gray">
-							<img src="../src/img/composition/side_green.jpg" alt="side green">
-							<img src="../src/img/composition/side_silver.jpg" alt="side silver"> -->
+							<img class="image--pink image image--active" src="../src/img/composition/side_pink.jpg"
+								alt="side pink">
+							<img class="image--blue image" src="../src/img/composition/side_blue.jpg" alt="side blue">
+							<img class="image--gray image" src="../src/img/composition/side_gray.jpg" alt="side gray">
+							<img class="image--green image" src="../src/img/composition/side_green.jpg" alt="side green">
+							<img class="image--silver image" src="../src/img/composition/side_silver.jpg" alt="side silver">
 						</div>
 					</div>
 				</div>
@@ -116,11 +144,11 @@
 						</div>
 					</div>
 					<div class="case__image">
-						<img src="../src/img/case/case_pink.jpg" alt="case image">
-						<!-- <img src="../src/img/case/case_blue.jpg" alt="case image">
-						<img src="../src/img/case/case_gray.jpg" alt="case image">
-						<img src="../src/img/case/case_green.jpg" alt="case image">
-						<img src="../src/img/case/case_silver.jpg" alt="case image"> -->
+						<img class="image image--pink image--active" src="../src/img/case/case_pink.jpg" alt="case image">
+						<img class="image image--blue" src="../src/img/case/case_blue.jpg" alt="case image">
+						<img class="image image--gray" src="../src/img/case/case_gray.jpg" alt="case image">
+						<img class="image image--green" src="../src/img/case/case_green.jpg" alt="case image">
+						<img class="image image--silver" src="../src/img/case/case_silver.jpg" alt="case image">
 					</div>
 				</div>
 			</section>
@@ -178,12 +206,11 @@
 					<li class="menu-footer__item"><a href="#" class="menu-footer__link">Privacy Policy</a></li>
 				</ul>
 			</div>
-
-
 		</footer>
 	</div>
 	<script type="module" src="./js/dynamic_adapt.js"></script>
 	<script src="./js/burger.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 
 </html>

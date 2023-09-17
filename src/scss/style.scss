@@ -28,7 +28,7 @@ body {
    background-color: $white-bgd-color;
 
    //стилі тега BODY
-   // @include adaptiveValue("font-size", 18, 16, 0);
+
    //скрол заблоковано
    .lock & {
       overflow: hidden;
@@ -112,18 +112,31 @@ body {
 //підключення футера
 @import "_footer.scss";
 
-//================PAGES=============//
-
 //===============HERO===============//
+
 .page {
    // .page__hero
    &__hero {
       @include adaptiveValue("padding-top", 163, 90, 0);
       @include adaptiveValue("padding-bottom", 163, 20, 0);
+      &:has(.image--pink.image--active) {
+         background: $bgd-pink;
+      }
+      &:has(.image--green.image--active) {
+         background: $bgd-green;
+      }
+      &:has(.image--gray.image--active) {
+         background: $bgd-gray;
+      }
+      &:has(.image--blue.image--active) {
+         background: $bgd-blue;
+      }
+      &:has(.image--silver.image--active) {
+         background: $bgd-silver;
+      }
    }
 }
 .hero {
-   background: $bgd-pink;
    min-height: 100vh;
    @media (max-width: $mobile) {
       min-height: 100%;
@@ -183,33 +196,18 @@ body {
          transform: translate(toRem(-142), toRem(418));
       }
    }
-   // .hero__images
-   &__images {
+   // .hero__image
+   &__image {
       text-align: center;
       position: relative;
       z-index: 1;
       max-width: 100%;
    }
-   // .hero__image
-   &__image {
-      // .hero__image--pink
-      &--pink {
-         img {
-            max-width: 100%;
-         }
-      }
-      // .hero__image--blue
-      &--blue {
-      }
-      // .hero__image--gray
-      &--gray {
-      }
-      // .hero__image--green
-      &--green {
-      }
-      // .hero__image--silver
-      &--silver {
-      }
+}
+.image {
+   display: none;
+   img {
+      max-width: 100%;
    }
 }
 
@@ -248,6 +246,9 @@ body {
       }
       img {
          max-width: 100%;
+      }
+      &--active {
+         display: none;
       }
    }
 }
@@ -289,9 +290,6 @@ body {
       justify-content: space-between;
       row-gap: toRem(15);
    }
-   // .composition__image
-   &__image {
-   }
 }
 
 //==============CASE=============//
@@ -305,6 +303,7 @@ body {
 .case {
    // .case__container
    &__container {
+      text-align: center;
    }
    // .case__header-block
    &__header-block {
@@ -315,7 +314,7 @@ body {
    }
    // .case__image
    &__image {
-      text-align: center;
+      display: inline-block;
       img {
          max-width: 100%;
       }
@@ -353,7 +352,6 @@ body {
    &__text {
       display: inline-block;
       max-width: toRem(405);
-      // margin: 0 auto;
    }
 }
 

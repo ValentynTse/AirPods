@@ -318,9 +318,23 @@ body {
   padding-top: calc(90px + 73 * ((100vw - 320px) / 1600));
   padding-bottom: calc(20px + 143 * ((100vw - 320px) / 1600));
 }
+.page__hero:has(.image--pink.image--active) {
+  background: linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0) 100%);
+}
+.page__hero:has(.image--green.image--active) {
+  background: linear-gradient(180deg, #DDEAD9 0%, rgba(235, 235, 235, 0) 100%);
+}
+.page__hero:has(.image--gray.image--active) {
+  background: linear-gradient(180deg, #B6B6B6 0%, rgba(235, 235, 235, 0) 100%);
+}
+.page__hero:has(.image--blue.image--active) {
+  background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0) 100%);
+}
+.page__hero:has(.image--silver.image--active) {
+  background: linear-gradient(180deg, #FAFAFA 0%, rgba(235, 235, 235, 0) 100%);
+}
 
 .hero {
-  background: linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0) 100%);
   min-height: 100vh;
 }
 @media (max-width: 47.99875em) {
@@ -390,15 +404,20 @@ body {
 .hero__title--ax {
   transform: translate(-8.875rem, 26.125rem);
 }
-.hero__images {
+.hero__image {
   text-align: center;
   position: relative;
   z-index: 1;
   max-width: 100%;
 }
-.hero__image--pink img {
+
+.image {
+  display: none;
+}
+.image img {
   max-width: 100%;
 }
+
 .page__colors {
   padding-top: calc(20px + 26 * ((100vw - 320px) / 1600));
   padding-bottom: calc(20px + 70 * ((100vw - 320px) / 1600));
@@ -428,6 +447,9 @@ body {
 }
 .colors__button img {
   max-width: 100%;
+}
+.colors__button--active {
+  display: none;
 }
 
 .page__composition {
@@ -464,11 +486,15 @@ body {
   justify-content: space-between;
   row-gap: 0.9375rem;
 }
+
 .page__case {
   padding-top: calc(20px + 60 * ((100vw - 320px) / 1600));
   padding-bottom: calc(20px + 60 * ((100vw - 320px) / 1600));
 }
 
+.case__container {
+  text-align: center;
+}
 .case__header-block {
   margin-bottom: 2.5rem;
 }
@@ -476,7 +502,7 @@ body {
   max-width: 100%;
 }
 .case__image {
-  text-align: center;
+  display: inline-block;
 }
 .case__image img {
   max-width: 100%;
